@@ -1,1 +1,227 @@
-hi
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Gethin Hackpad v1</title>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap"
+    rel="stylesheet"
+  >
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      background: #ececec;
+      font-family: 'Open Sans', sans-serif;
+      line-height: 1.7;
+      color: #222;
+    }
+
+    .page {
+      width: calc(100% - 40px);
+      max-width: 1000px;
+      min-height: 100vh;
+      margin: 40px auto;
+      background: #ffffff;
+      box-shadow: 0 0 25px rgba(0, 0, 0, 0.15);
+    }
+
+    .header {
+      padding: 30px 40px 0;
+      text-align: center;
+    }
+
+    .header-title {
+      margin: 0;
+      color: #000;
+      font-size: 2.6em;
+      font-weight: 700;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+    }
+
+    .header-subtitle {
+      margin: 4px 0 18px;
+      color: #0055aa;
+      font-size: 0.95em;
+      font-weight: 600;
+      letter-spacing: 0.4px;
+    }
+
+    nav {
+      display: flex;
+      height: 42px;
+      align-items: center;
+      justify-content: center;
+      background: #000000;
+    }
+
+    nav a {
+      display: flex;
+      height: 100%;
+      align-items: center;
+      padding: 0 18px;
+      color: #ffffff;
+      font-size: 0.95em;
+      font-weight: 700;
+      text-decoration: none;
+    }
+
+    nav a:hover {
+      background: #333333;
+    }
+
+    nav a.active {
+      background: #002db3;
+    }
+
+    .nav-underline {
+      width: 100%;
+      height: 10px;
+      background: #002db3;
+    }
+
+    .content {
+      padding: 35px 40px 45px;
+    }
+
+    .model-title {
+      margin: 0;
+      color: #000000;
+      font-size: 1.8em;
+      font-weight: 600;
+    }
+
+    .model-description {
+      max-width: 760px;
+      margin: 10px 0 22px;
+      color: #333333;
+      font-size: 0.98em;
+    }
+
+    .model-viewer {
+      width: 100%;
+      aspect-ratio: 4 / 3;
+      overflow: hidden;
+      border: 1px solid #d5d5d5;
+      border-radius: 4px;
+      background: #f8f8f8;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    }
+
+    .model-viewer iframe {
+      display: block;
+      width: 100%;
+      height: 100%;
+      border: 0;
+    }
+
+    .instructions {
+      margin-top: 20px;
+      padding: 16px 18px;
+      border: 1px solid #dddddd;
+      border-radius: 4px;
+      background: #f8f8f8;
+      color: #333333;
+      font-size: 0.92em;
+    }
+
+    .instructions strong {
+      color: #002db3;
+    }
+
+    .footer {
+      padding: 18px 40px 30px;
+      color: #777777;
+      font-size: 0.85em;
+      text-align: center;
+    }
+
+    @media (max-width: 700px) {
+      .page {
+        width: calc(100% - 20px);
+        margin: 20px auto;
+      }
+
+      .header {
+        padding: 20px 20px 0;
+      }
+
+      .header-title {
+        font-size: 2em;
+      }
+
+      nav a {
+        padding: 0 12px;
+        font-size: 0.82em;
+      }
+
+      .content {
+        padding: 25px 20px 35px;
+      }
+
+      .model-title {
+        font-size: 1.5em;
+      }
+
+      .footer {
+        padding: 15px 20px 25px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <main class="page">
+    <header class="header">
+      <h1 class="header-title">Gethin</h1>
+      <div class="header-subtitle">INTERACTIVE 3D MODEL</div>
+    </header>
+
+    <nav aria-label="Main navigation">
+      <a href="#model" class="active">MODEL</a>
+    </nav>
+
+    <div class="nav-underline"></div>
+
+    <section class="content" id="model">
+      <h2 class="model-title">Gethin Hackpad v1</h2>
+
+      <p class="model-description">
+        Explore the interactive Fusion 360 model of my custom Hackpad.
+        Drag to rotate the model, scroll to zoom, and use the viewer controls
+        to inspect the design.
+      </p>
+
+      <div class="model-viewer">
+        <iframe
+          src="https://windsor438.autodesk360.com/shares/public/SH90d2dQT28d5b6028119669473a7297d8e0?mode=embed"
+          title="Interactive Fusion 360 model of the Gethin Hackpad v1"
+          allowfullscreen
+          webkitallowfullscreen
+          mozallowfullscreen
+          frameborder="0">
+        </iframe>
+      </div>
+
+      <div class="instructions">
+        <strong>Controls:</strong>
+        Drag to rotate the model, scroll or pinch to zoom, and use the
+        Autodesk viewer controls to change the view.
+      </div>
+    </section>
+
+    <footer class="footer">
+      Gethin Hackpad v1 · Designed in Fusion 360
+    </footer>
+  </main>
+</body>
+</html>
